@@ -1,4 +1,4 @@
-Save_the_Ball
+Save the Ball
 =============
 
 Save the Ball is an iOS game inspired by Atari's classic breakout.
