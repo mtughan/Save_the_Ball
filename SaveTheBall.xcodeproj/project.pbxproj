@@ -90,6 +90,8 @@
 		0E69D1DD18D6AD0800CDA858 = {
 			isa = PBXGroup;
 			children = (
+				ABA904EC18DA176600C03FCA /* View Controllers */,
+				ABA904EB18DA176200C03FCA /* Nibs */,
 				0E69D1F118D6AD0900CDA858 /* SaveTheBall */,
 				0E69D21518D6AD0900CDA858 /* SaveTheBallTests */,
 				0E69D1E818D6AD0800CDA858 /* Frameworks */,
@@ -162,6 +164,20 @@
 				0E69D21818D6AD0900CDA858 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABA904EB18DA176200C03FCA /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Nibs;
+			sourceTree = "<group>";
+		};
+		ABA904EC18DA176600C03FCA /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,6 +489,7 @@
 				0E69D22118D6AD0900CDA858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E69D22218D6AD0900CDA858 /* Build configuration list for PBXNativeTarget "SaveTheBallTests" */ = {
 			isa = XCConfigurationList;
@@ -481,6 +498,7 @@
 				0E69D22418D6AD0900CDA858 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
