@@ -7,13 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Social/Social.h"
-#import "Accounts/Accounts.h"
+#import <Social/Social.h>
+#import <Accounts/Accounts.h>
 
 @interface STBSocialViewController : UIViewController
 {
     SLComposeViewController *myFacebook;
+    SLComposeViewController *myTwitter;
 }
 
 - (IBAction)facebook:(id)sender;
+- (IBAction)twitter:(id)sender;
 @end

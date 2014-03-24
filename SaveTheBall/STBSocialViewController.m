@@ -47,9 +47,16 @@
 */
 
 - (IBAction)facebook:(id)sender {
-    myFacebook = [[SLComposeViewController alloc] init];
+    myFacebook = [[SLComposeViewController alloc]init];
     myFacebook = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-    [myFacebook setInitialText:@"For testing only"];
+    [myFacebook setInitialText:@"For Facebook Testing"];
     [self presentViewController:myFacebook animated:YES completion:nil];
+}
+
+- (IBAction)twitter:(id)sender {
+    myTwitter = [[SLComposeViewController alloc]init];
+    myTwitter = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+    [myTwitter setInitialText:@"For Twitter Testing"];
+    [self presentViewController:myTwitter animated:YES completion:nil];
 }
 @end
