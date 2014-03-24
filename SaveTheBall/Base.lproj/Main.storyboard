@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="705" y="11"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="CtS-rA-C9T">
             <objects>
-                <viewController id="LVB-YS-i5n" customClass="STBViewController" sceneMemberID="viewController">
+                <viewController id="LVB-YS-i5n" customClass="STBGameViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TvN-0d-DFh"/>
                         <viewControllerLayoutGuide type="bottom" id="aVg-JY-jeM"/>

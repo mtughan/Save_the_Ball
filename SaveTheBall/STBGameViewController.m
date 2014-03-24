@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Spiral Iris Software. All rights reserved.
 //
 
-#import "STBViewController.h"
+#import "STBGameViewController.h"
 #import "STBMyScene.h"
 
-@implementation STBViewController
+@implementation STBGameViewController
 
 - (void)viewDidLoad
 {
