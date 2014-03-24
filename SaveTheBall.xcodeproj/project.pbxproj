@@ -16,7 +16,7 @@
 		0E69D1FC18D6AD0900CDA858 /* STBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D1FB18D6AD0900CDA858 /* STBAppDelegate.m */; };
 		0E69D1FF18D6AD0900CDA858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E69D1FD18D6AD0900CDA858 /* Main.storyboard */; };
 		0E69D20218D6AD0900CDA858 /* STBGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D20118D6AD0900CDA858 /* STBGameViewController.m */; };
-		0E69D20518D6AD0900CDA858 /* STBMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D20418D6AD0900CDA858 /* STBMyScene.m */; };
+		0E69D20518D6AD0900CDA858 /* STBGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D20418D6AD0900CDA858 /* STBGameScene.m */; };
 		0E69D20718D6AD0900CDA858 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 0E69D20618D6AD0900CDA858 /* Spaceship.png */; };
 		0E69D20918D6AD0900CDA858 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E69D20818D6AD0900CDA858 /* Images.xcassets */; };
 		0E69D21018D6AD0900CDA858 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69D20F18D6AD0900CDA858 /* XCTest.framework */; };
@@ -58,8 +58,8 @@
 		0E69D1FE18D6AD0900CDA858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E69D20018D6AD0900CDA858 /* STBGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STBGameViewController.h; path = SaveTheBall/STBGameViewController.h; sourceTree = "<group>"; };
 		0E69D20118D6AD0900CDA858 /* STBGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = STBGameViewController.m; path = SaveTheBall/STBGameViewController.m; sourceTree = "<group>"; };
-		0E69D20318D6AD0900CDA858 /* STBMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBMyScene.h; sourceTree = "<group>"; };
-		0E69D20418D6AD0900CDA858 /* STBMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBMyScene.m; sourceTree = "<group>"; };
+		0E69D20318D6AD0900CDA858 /* STBGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBGameScene.h; sourceTree = "<group>"; };
+		0E69D20418D6AD0900CDA858 /* STBGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBGameScene.m; sourceTree = "<group>"; };
 		0E69D20618D6AD0900CDA858 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		0E69D20818D6AD0900CDA858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E69D20E18D6AD0900CDA858 /* SaveTheBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveTheBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,8 +152,8 @@
 				0E69D20618D6AD0900CDA858 /* Spaceship.png */,
 				0E69D1FA18D6AD0900CDA858 /* STBAppDelegate.h */,
 				0E69D1FB18D6AD0900CDA858 /* STBAppDelegate.m */,
-				0E69D20318D6AD0900CDA858 /* STBMyScene.h */,
-				0E69D20418D6AD0900CDA858 /* STBMyScene.m */,
+				0E69D20318D6AD0900CDA858 /* STBGameScene.h */,
+				0E69D20418D6AD0900CDA858 /* STBGameScene.m */,
 				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 			);
 			path = SaveTheBall;
@@ -321,7 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E69D20518D6AD0900CDA858 /* STBMyScene.m in Sources */,
+				0E69D20518D6AD0900CDA858 /* STBGameScene.m in Sources */,
 				CB71413218DFCAC60025270C /* STBMainMenuViewController.m in Sources */,
 				0E69D20218D6AD0900CDA858 /* STBGameViewController.m in Sources */,
 				AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */,

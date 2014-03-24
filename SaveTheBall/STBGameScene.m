@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Spiral Iris Software. All rights reserved.
 //
 
-#import "STBMyScene.h"
+#import "STBGameScene.h"
 
-@implementation STBMyScene
+@implementation STBGameScene
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {

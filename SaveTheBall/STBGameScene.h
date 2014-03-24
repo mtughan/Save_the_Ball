@@ -8,7 +8,7 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface STBMyScene : SKScene
+@interface STBGameScene : SKScene
 {
     
 }
