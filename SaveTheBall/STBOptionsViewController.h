@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STBOptionsViewController : UIViewController
+@interface STBOptionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
+@property (strong, nonatomic) NSArray *array;
 @end
