@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Main Menu View Controller-->
+        <!--Main Menu View Controller - Save the Ball!-->
         <scene sceneID="3tA-Eu-oBo">
             <objects>
-                <viewController id="uwf-LA-qHX" customClass="STBMainMenuViewController" sceneMemberID="viewController">
+                <viewController title="Save the Ball!" id="uwf-LA-qHX" customClass="STBMainMenuViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i6F-AL-g3J"/>
                         <viewControllerLayoutGuide type="bottom" id="nri-hL-cbU"/>
@@ -23,7 +23,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="LVB-YS-i5n" kind="modal" id="wbq-4S-Aoq"/>
+                                    <segue destination="LVB-YS-i5n" kind="modal" modalTransitionStyle="crossDissolve" id="wbq-4S-Aoq"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXw-fO-YT8">
@@ -33,13 +33,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JcZ-B4-mUA" kind="modal" id="Cu9-rX-FTZ"/>
+                                    <segue destination="JcZ-B4-mUA" kind="push" id="Cu9-rX-FTZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="fvc-VC-56P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJf-wi-pjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -63,10 +62,10 @@
             </objects>
             <point key="canvasLocation" x="1237" y="-261"/>
         </scene>
-        <!--Social View Controller-->
+        <!--Social View Controller - Social-->
         <scene sceneID="S8H-5A-Jsv">
             <objects>
-                <viewController id="JcZ-B4-mUA" customClass="STBSocialViewController" sceneMemberID="viewController">
+                <viewController title="Social" id="JcZ-B4-mUA" customClass="STBSocialViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="po5-hq-obL"/>
                         <viewControllerLayoutGuide type="bottom" id="Iw8-OJ-hNj"/>
