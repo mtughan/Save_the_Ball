@@ -70,10 +70,10 @@
 		0E69D21B18D6AD0900CDA858 /* SaveTheBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveTheBallTests.m; sourceTree = "<group>"; };
 		0E6F46C618E0713500D3D57A /* STBGameBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBGameBlock.h; path = SaveTheBall/STBGameBlock.h; sourceTree = "<group>"; };
 		0E6F46C718E0713500D3D57A /* STBGameBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBGameBlock.m; path = SaveTheBall/STBGameBlock.m; sourceTree = "<group>"; };
-		AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveTheBall/STBOptionsViewController.h; sourceTree = "<group>"; };
-		AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveTheBall/STBOptionsViewController.m; sourceTree = "<group>"; };
-		AB17A1FB18E06CB60039BA91 /* STBHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveTheBall/STBHighScoreViewController.h; sourceTree = "<group>"; };
-		AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveTheBall/STBHighScoreViewController.m; sourceTree = "<group>"; };
+		AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBOptionsViewController.h; path = SaveTheBall/STBOptionsViewController.h; sourceTree = "<group>"; };
+		AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBOptionsViewController.m; path = SaveTheBall/STBOptionsViewController.m; sourceTree = "<group>"; };
+		AB17A1FB18E06CB60039BA91 /* STBHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBHighScoreViewController.h; path = SaveTheBall/STBHighScoreViewController.h; sourceTree = "<group>"; };
+		AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBHighScoreViewController.m; path = SaveTheBall/STBHighScoreViewController.m; sourceTree = "<group>"; };
 		CB71413018DFCAC60025270C /* STBMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBMainMenuViewController.h; path = SaveTheBall/STBMainMenuViewController.h; sourceTree = "<group>"; };
 		CB71413118DFCAC60025270C /* STBMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBMainMenuViewController.m; path = SaveTheBall/STBMainMenuViewController.m; sourceTree = "<group>"; };
 		CB71413418DFCB4A0025270C /* button-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-long.png"; path = "SaveTheBall/images/button-long.png"; sourceTree = "<group>"; };
@@ -114,13 +114,13 @@
 		0E69D1DD18D6AD0800CDA858 = {
 			isa = PBXGroup;
 			children = (
-				0E6F46C418E0711A00D3D57A /* SpriteKit Classes */,
 				0E69D1E818D6AD0800CDA858 /* Frameworks */,
 				CB71413318DFCB3C0025270C /* Images */,
 				ABA904EB18DA176200C03FCA /* Nibs */,
 				0E69D1E718D6AD0800CDA858 /* Products */,
 				0E69D1F118D6AD0900CDA858 /* SaveTheBall */,
 				0E69D21518D6AD0900CDA858 /* SaveTheBallTests */,
+				0E6F46C418E0711A00D3D57A /* SpriteKit Classes */,
 				ABA904EC18DA176600C03FCA /* View Controllers */,
 			);
 			sourceTree = "<group>";
