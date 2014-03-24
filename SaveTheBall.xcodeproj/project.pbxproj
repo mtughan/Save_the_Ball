@@ -24,6 +24,7 @@
 		0E69D21218D6AD0900CDA858 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E69D1ED18D6AD0800CDA858 /* UIKit.framework */; };
 		0E69D21A18D6AD0900CDA858 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0E69D21818D6AD0900CDA858 /* InfoPlist.strings */; };
 		0E69D21C18D6AD0900CDA858 /* SaveTheBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D21B18D6AD0900CDA858 /* SaveTheBallTests.m */; };
+		0E6F46C818E0713500D3D57A /* STBGameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F46C718E0713500D3D57A /* STBGameBlock.m */; };
 		AB17A1FA18E06C980039BA91 /* STBOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */; };
 		AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */; };
 		CB71413218DFCAC60025270C /* STBMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413118DFCAC60025270C /* STBMainMenuViewController.m */; };
@@ -58,8 +59,8 @@
 		0E69D1FE18D6AD0900CDA858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E69D20018D6AD0900CDA858 /* STBGameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STBGameViewController.h; path = SaveTheBall/STBGameViewController.h; sourceTree = "<group>"; };
 		0E69D20118D6AD0900CDA858 /* STBGameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = STBGameViewController.m; path = SaveTheBall/STBGameViewController.m; sourceTree = "<group>"; };
-		0E69D20318D6AD0900CDA858 /* STBGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STBGameScene.h; sourceTree = "<group>"; };
-		0E69D20418D6AD0900CDA858 /* STBGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = STBGameScene.m; sourceTree = "<group>"; };
+		0E69D20318D6AD0900CDA858 /* STBGameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = STBGameScene.h; path = SaveTheBall/STBGameScene.h; sourceTree = "<group>"; };
+		0E69D20418D6AD0900CDA858 /* STBGameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = STBGameScene.m; path = SaveTheBall/STBGameScene.m; sourceTree = "<group>"; };
 		0E69D20618D6AD0900CDA858 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		0E69D20818D6AD0900CDA858 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0E69D20E18D6AD0900CDA858 /* SaveTheBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaveTheBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +68,8 @@
 		0E69D21718D6AD0900CDA858 /* SaveTheBallTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SaveTheBallTests-Info.plist"; sourceTree = "<group>"; };
 		0E69D21918D6AD0900CDA858 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0E69D21B18D6AD0900CDA858 /* SaveTheBallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SaveTheBallTests.m; sourceTree = "<group>"; };
+		0E6F46C618E0713500D3D57A /* STBGameBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBGameBlock.h; path = SaveTheBall/STBGameBlock.h; sourceTree = "<group>"; };
+		0E6F46C718E0713500D3D57A /* STBGameBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBGameBlock.m; path = SaveTheBall/STBGameBlock.m; sourceTree = "<group>"; };
 		AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBOptionsViewController.h; sourceTree = "<group>"; };
 		AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBOptionsViewController.m; sourceTree = "<group>"; };
 		AB17A1FB18E06CB60039BA91 /* STBHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBHighScoreViewController.h; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		0E69D1DD18D6AD0800CDA858 = {
 			isa = PBXGroup;
 			children = (
+				0E6F46C418E0711A00D3D57A /* SpriteKit Classes */,
 				0E69D1E818D6AD0800CDA858 /* Frameworks */,
 				CB71413318DFCB3C0025270C /* Images */,
 				ABA904EB18DA176200C03FCA /* Nibs */,
@@ -152,8 +156,6 @@
 				0E69D20618D6AD0900CDA858 /* Spaceship.png */,
 				0E69D1FA18D6AD0900CDA858 /* STBAppDelegate.h */,
 				0E69D1FB18D6AD0900CDA858 /* STBAppDelegate.m */,
-				0E69D20318D6AD0900CDA858 /* STBGameScene.h */,
-				0E69D20418D6AD0900CDA858 /* STBGameScene.m */,
 				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 			);
 			path = SaveTheBall;
@@ -186,6 +188,17 @@
 				0E69D21818D6AD0900CDA858 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0E6F46C418E0711A00D3D57A /* SpriteKit Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F46C618E0713500D3D57A /* STBGameBlock.h */,
+				0E6F46C718E0713500D3D57A /* STBGameBlock.m */,
+				0E69D20318D6AD0900CDA858 /* STBGameScene.h */,
+				0E69D20418D6AD0900CDA858 /* STBGameScene.m */,
+			);
+			name = "SpriteKit Classes";
 			sourceTree = "<group>";
 		};
 		ABA904EB18DA176200C03FCA /* Nibs */ = {
@@ -326,6 +339,7 @@
 				0E69D20218D6AD0900CDA858 /* STBGameViewController.m in Sources */,
 				AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */,
 				CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */,
+				0E6F46C818E0713500D3D57A /* STBGameBlock.m in Sources */,
 				0E69D1FC18D6AD0900CDA858 /* STBAppDelegate.m in Sources */,
 				AB17A1FA18E06C980039BA91 /* STBOptionsViewController.m in Sources */,
 				0E69D1F818D6AD0900CDA858 /* main.m in Sources */,
