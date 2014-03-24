@@ -26,6 +26,9 @@
 		0E69D21C18D6AD0900CDA858 /* SaveTheBallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E69D21B18D6AD0900CDA858 /* SaveTheBallTests.m */; };
 		CB71413218DFCAC60025270C /* STBMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413118DFCAC60025270C /* STBMainMenuViewController.m */; };
 		CB71413518DFCB4A0025270C /* button-long.png in Resources */ = {isa = PBXBuildFile; fileRef = CB71413418DFCB4A0025270C /* button-long.png */; };
+		CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413718DFCF330025270C /* STBSocialViewController.m */; };
+		CB71413A18DFD06A0025270C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413918DFD06A0025270C /* Social.framework */; };
+		CB71413C18DFD0840025270C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413B18DFD0840025270C /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,10 @@
 		CB71413018DFCAC60025270C /* STBMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBMainMenuViewController.h; sourceTree = "<group>"; };
 		CB71413118DFCAC60025270C /* STBMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBMainMenuViewController.m; sourceTree = "<group>"; };
 		CB71413418DFCB4A0025270C /* button-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-long.png"; path = "SaveTheBall/images/button-long.png"; sourceTree = "<group>"; };
+		CB71413618DFCF330025270C /* STBSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBSocialViewController.h; sourceTree = "<group>"; };
+		CB71413718DFCF330025270C /* STBSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBSocialViewController.m; sourceTree = "<group>"; };
+		CB71413918DFD06A0025270C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CB71413B18DFD0840025270C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +79,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB71413C18DFD0840025270C /* Accounts.framework in Frameworks */,
+				CB71413A18DFD06A0025270C /* Social.framework in Frameworks */,
 				0E69D1EC18D6AD0800CDA858 /* CoreGraphics.framework in Frameworks */,
 				0E69D1EE18D6AD0800CDA858 /* UIKit.framework in Frameworks */,
 				0E69D1F018D6AD0800CDA858 /* SpriteKit.framework in Frameworks */,
@@ -117,6 +126,8 @@
 		0E69D1E818D6AD0800CDA858 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB71413B18DFD0840025270C /* Accounts.framework */,
+				CB71413918DFD06A0025270C /* Social.framework */,
 				0E69D1E918D6AD0800CDA858 /* Foundation.framework */,
 				0E69D1EB18D6AD0800CDA858 /* CoreGraphics.framework */,
 				0E69D1ED18D6AD0800CDA858 /* UIKit.framework */,
@@ -141,6 +152,8 @@
 				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 				CB71413018DFCAC60025270C /* STBMainMenuViewController.h */,
 				CB71413118DFCAC60025270C /* STBMainMenuViewController.m */,
+				CB71413618DFCF330025270C /* STBSocialViewController.h */,
+				CB71413718DFCF330025270C /* STBSocialViewController.m */,
 			);
 			path = SaveTheBall;
 			sourceTree = "<group>";
@@ -299,6 +312,7 @@
 				0E69D20518D6AD0900CDA858 /* STBMyScene.m in Sources */,
 				CB71413218DFCAC60025270C /* STBMainMenuViewController.m in Sources */,
 				0E69D20218D6AD0900CDA858 /* STBViewController.m in Sources */,
+				CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */,
 				0E69D1FC18D6AD0900CDA858 /* STBAppDelegate.m in Sources */,
 				0E69D1F818D6AD0900CDA858 /* main.m in Sources */,
 			);
