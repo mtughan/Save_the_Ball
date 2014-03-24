@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U2-LW-6Hg">
-                                <rect key="frame" x="20" y="228" width="280" height="30"/>
+                                <rect key="frame" x="20" y="156" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Play!" backgroundImage="button-long.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -26,14 +26,34 @@
                                     <segue destination="LVB-YS-i5n" kind="modal" modalTransitionStyle="crossDissolve" id="wbq-4S-Aoq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYe-Ji-1iT">
+                                <rect key="frame" x="20" y="227" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Options" backgroundImage="button-long.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YaJ-QO-5Jd" kind="push" id="2dV-1k-Mm9"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXw-fO-YT8">
-                                <rect key="frame" x="20" y="302" width="280" height="30"/>
+                                <rect key="frame" x="20" y="364" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Social" backgroundImage="button-long.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="JcZ-B4-mUA" kind="push" id="Cu9-rX-FTZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e37-HG-Fw6">
+                                <rect key="frame" x="20" y="297" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="High Score" backgroundImage="button-long.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4dj-Hq-TZW" kind="push" id="Cns-g0-ark"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +81,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="btX-cZ-eVz" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1237" y="-261"/>
+        </scene>
+        <!--High Score View Controller-->
+        <scene sceneID="ucE-S7-NKZ">
+            <objects>
+                <viewController id="4dj-Hq-TZW" customClass="STBHighScoreViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="sHT-Z4-VMO"/>
+                        <viewControllerLayoutGuide type="bottom" id="O7E-8o-u9Y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="taq-vp-X5g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="QiN-D3-ydA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fiy-wM-ZiZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1237" y="-986"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="x4U-3k-oHs">
+            <objects>
+                <viewController id="YaJ-QO-5Jd" customClass="STBOptionsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2v4-WS-8ff"/>
+                        <viewControllerLayoutGuide type="bottom" id="u3K-03-itI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kR2-sd-ln1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Gs-y7-MzN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHJ-a3-sTH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1246" y="1088"/>
         </scene>
         <!--Social View Controller - Social-->
         <scene sceneID="S8H-5A-Jsv">
