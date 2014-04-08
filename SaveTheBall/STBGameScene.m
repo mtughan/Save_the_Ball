@@ -50,4 +50,12 @@
     /* Called before each frame is rendered */
 }
 
+- (void)didBeginContact:(SKPhysicsContact *)contact {
+    
+}
+
+- (void)didEndContact:(SKPhysicsContact *)contact {
+    
+}
+
 @end
