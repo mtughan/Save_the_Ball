@@ -9,8 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface STBGameScene : SKScene <SKPhysicsContactDelegate>
-{
-    
-}
+
+@property (strong, nonatomic) SKShapeNode *ball;
 
 @end
