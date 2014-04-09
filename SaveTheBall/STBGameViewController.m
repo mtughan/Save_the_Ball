@@ -33,6 +33,10 @@
     return YES;
 }
 
+- (BOOL)prefersStatusBarHidden {
+    return YES;
+}
+
 - (NSUInteger)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskLandscape;
