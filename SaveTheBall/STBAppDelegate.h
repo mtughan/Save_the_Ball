@@ -9,7 +9,21 @@
 #import <UIKit/UIKit.h>
 
 @interface STBAppDelegate : UIResponder <UIApplicationDelegate>
+{
+    NSString *databaseName;
+    NSString *databasePath;
+    NSMutableArray *player;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) NSString *databaseName;
+@property (strong, nonatomic) NSString *databasePath;
+@property (strong, nonatomic) NSMutableArray *player;
+
+-(void)checkAndCreateDatabase;
+-(void)readFromDatabase;
+-(void)insertIntoDatabase:(NSString *)name andScore:(NSString *)score;
+
 
 @end
