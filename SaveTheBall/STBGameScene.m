@@ -9,6 +9,7 @@
 #import "STBGameScene.h"
 
 static const int ballRadius = 10;
+static const int paddleLength = 50;
 
 static const uint32_t ballCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
@@ -22,7 +23,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball;
+@synthesize ball, paddle;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -65,6 +66,32 @@ static NSString *bottomWallName = @"bottom wall";
         
         self.ball.physicsBody = ballPhysics;
         [self.ball.physicsBody applyImpulse:CGVectorMake(-3.0f, 3.0f)];
+        
+        //Paddle
+        self.paddle = [[SKShapeNode alloc] init];
+        self.paddle.name = ballName;
+        self.paddle.fillColor = [SKColor yellowColor];
+        
+        CGPathRef rect = CGPathCreateWithRect(CGRectMake(-paddleLength+25, 0, paddleLength, 10), NULL);
+        self.paddle.path = rect;
+        [self addChild:self.paddle];
+        CGPathRelease(rect);
+        
+        self.paddle.position = CGPointMake(x, 30);
+        
+        //Paddle Physics
+        SKPhysicsBody *paddlePhysics = [SKPhysicsBody bodyWithRectangleOfSize:paddle.frame.size];
+        paddlePhysics.restitution = 0.1f;
+        paddlePhysics.friction = 0.4f;
+        paddlePhysics.dynamic = NO;
+        
+        paddlePhysics.categoryBitMask = paddleCategory;
+        paddlePhysics.collisionBitMask = wallCategory | ballCategory;
+        paddlePhysics.contactTestBitMask = ballCategory;
+        
+        self.paddle.physicsBody = paddlePhysics;
+        
+
     }
     return self;
 }
