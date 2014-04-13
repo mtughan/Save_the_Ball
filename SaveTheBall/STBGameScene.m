@@ -33,6 +33,7 @@ static NSString *bottomWallName = @"bottom wall";
         self.physicsWorld.contactDelegate = self;
         self.physicsWorld.gravity = CGVectorMake(0.0f, 0.0f);
         
+        // Border
         SKPhysicsBody *borderBody = [SKPhysicsBody bodyWithEdgeLoopFromRect:self.frame];
         borderBody.friction = 0.0f;
         borderBody.categoryBitMask = wallCategory;
@@ -41,6 +42,7 @@ static NSString *bottomWallName = @"bottom wall";
         
         self.name = wallName;
         
+        // Ball
         self.ball = [[SKShapeNode alloc] init];
         self.ball.name = ballName;
         self.ball.fillColor = [SKColor whiteColor];
@@ -54,6 +56,7 @@ static NSString *bottomWallName = @"bottom wall";
         double y = CGRectGetMidY(self.frame);
         self.ball.position = CGPointMake(x, y);
         
+        // Ball Physics
         SKPhysicsBody *ballPhysics = [SKPhysicsBody bodyWithCircleOfRadius:ballRadius];
         ballPhysics.restitution = 1.0f;
         ballPhysics.linearDamping = 0.0f;
@@ -128,10 +131,11 @@ static NSString *bottomWallName = @"bottom wall";
     if (self.touchPaddle)
     {
         UITouch *touch = [touches anyObject];
-        CGPoint touchLocation = [touch locationInNode:self];
-        CGPoint previousLocation = [touch previousLocationInNode:self];
+        CGPoint touchPosition = [touch locationInNode:self];
+        CGPoint previousPosition = [touch previousLocationInNode:self];
         self.paddle.name = paddleName;
-        int newPaddleX = paddle.position.x + (touchLocation.x - previousLocation.x);
+        // Set paddle position
+        int newPaddleX = paddle.position.x + (touchPosition.x - previousPosition.x);
         paddle.position = CGPointMake(newPaddleX, paddle.position.y);
     }
 }
