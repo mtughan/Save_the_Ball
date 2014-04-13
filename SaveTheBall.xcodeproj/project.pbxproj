@@ -36,6 +36,8 @@
 		CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413718DFCF330025270C /* STBSocialViewController.m */; };
 		CB71413A18DFD06A0025270C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413918DFD06A0025270C /* Social.framework */; };
 		CB71413C18DFD0840025270C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413B18DFD0840025270C /* Accounts.framework */; };
+		CBF386A018FB29B50026AC55 /* nyan_cat_1136_load.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF3869F18FB29B50026AC55 /* nyan_cat_1136_load.png */; };
+		CBF386A218FB2A690026AC55 /* nyan_cat_960_load.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386A118FB2A690026AC55 /* nyan_cat_960_load.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		CB71413918DFD06A0025270C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CB71413B18DFD0840025270C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		CB8C5B9918DFD74B009BEC51 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		CBF3869F18FB29B50026AC55 /* nyan_cat_1136_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_1136_load.png; path = SaveTheBall/images/nyan_cat_1136_load.png; sourceTree = "<group>"; };
+		CBF386A118FB2A690026AC55 /* nyan_cat_960_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_960_load.png; path = SaveTheBall/images/nyan_cat_960_load.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +249,8 @@
 		CB71413318DFCB3C0025270C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CBF386A118FB2A690026AC55 /* nyan_cat_960_load.png */,
+				CBF3869F18FB29B50026AC55 /* nyan_cat_1136_load.png */,
 				CB71413418DFCB4A0025270C /* button-long.png */,
 			);
 			name = Images;
@@ -329,8 +335,10 @@
 			files = (
 				0E69D1F618D6AD0900CDA858 /* InfoPlist.strings in Resources */,
 				0E69D20918D6AD0900CDA858 /* Images.xcassets in Resources */,
+				CBF386A218FB2A690026AC55 /* nyan_cat_960_load.png in Resources */,
 				CB71413518DFCB4A0025270C /* button-long.png in Resources */,
 				CB1321DF18F8A40800BB2FA2 /* STB.DB in Resources */,
+				CBF386A018FB29B50026AC55 /* nyan_cat_1136_load.png in Resources */,
 				0E69D20718D6AD0900CDA858 /* Spaceship.png in Resources */,
 				0E69D1FF18D6AD0900CDA858 /* Main.storyboard in Resources */,
 			);
