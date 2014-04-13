@@ -23,7 +23,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball, paddle;
+@synthesize ball, paddle, touchPaddle;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -69,7 +69,7 @@ static NSString *bottomWallName = @"bottom wall";
         
         //Paddle
         self.paddle = [[SKShapeNode alloc] init];
-        self.paddle.name = ballName;
+        self.paddle.name = paddleName;
         self.paddle.fillColor = [SKColor yellowColor];
         
         CGPathRef rect = CGPathCreateWithRect(CGRectMake(-paddleLength+25, 0, paddleLength, 10), NULL);
@@ -98,6 +98,14 @@ static NSString *bottomWallName = @"bottom wall";
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
+    UITouch *touch = [touches anyObject];
+    CGPoint touchLocation = [touch locationInNode:self];
+    
+    SKPhysicsBody *body = [self.physicsWorld bodyAtPoint:touchLocation];
+    if (body && [body.node.name isEqualToString: paddleName])
+    {
+        self.touchPaddle = YES;
+    }
     
 //    for (UITouch *touch in touches) {
 //        CGPoint location = [touch locationInNode:self];
@@ -113,6 +121,24 @@ static NSString *bottomWallName = @"bottom wall";
 //        [self addChild:sprite];
 //    }
     self.view.paused = NO;
+}
+
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (self.touchPaddle)
+    {
+        UITouch *touch = [touches anyObject];
+        CGPoint touchLocation = [touch locationInNode:self];
+        CGPoint previousLocation = [touch previousLocationInNode:self];
+        self.paddle.name = paddleName;
+        int newPaddleX = paddle.position.x + (touchLocation.x - previousLocation.x);
+        paddle.position = CGPointMake(newPaddleX, paddle.position.y);
+    }
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    self.touchPaddle = NO;
 }
 
 -(void)update:(CFTimeInterval)currentTime {

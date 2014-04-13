@@ -12,7 +12,6 @@
 
 @property (strong, nonatomic) SKShapeNode *ball;
 @property (strong, nonatomic) SKShapeNode *paddle;
-
--(BOOL) movePaddle;
+@property (nonatomic) BOOL touchPaddle;
 
 @end
