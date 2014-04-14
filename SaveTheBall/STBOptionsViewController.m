@@ -9,15 +9,13 @@
 #import "STBOptionsViewController.h"
 #import "STBGameScene.h"
 #import "STBGameViewController.h"
+#import "STBAppDelegate.h"
 
 @interface STBOptionsViewController ()
     
 @end
 
 @implementation STBOptionsViewController
-{
-    SKShapeNode *tempBall;
-}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -33,7 +31,14 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.array = [[NSArray alloc]initWithObjects:@"1", @"2", @"3", @"4",@"5",@"6", nil];
+    self.array = [[NSArray alloc] initWithObjects:
+                  [UIColor redColor],
+                  [UIColor blueColor],
+                  [UIColor purpleColor],
+                  [UIColor orangeColor],
+                  [UIColor whiteColor],
+                  [UIColor magentaColor],
+                  nil];
     
 }
 
@@ -60,63 +65,19 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    if(indexPath.row == 0){
-        cell.backgroundColor = [UIColor redColor];
-        
-    }
-    else if(indexPath.row == 1){
-        cell.backgroundColor = [UIColor blueColor];
-
-    }
-    else if(indexPath.row == 2){
-        cell.backgroundColor = [UIColor purpleColor];
-        
-    }
-    else if(indexPath.row == 3){
-        cell.backgroundColor = [UIColor orangeColor];
-        
-    }
-    else if(indexPath.row == 4){
-        cell.backgroundColor = [UIColor whiteColor];
-        
-    }
-    else if(indexPath.row == 5){
-        cell.backgroundColor = [UIColor magentaColor];
-        
-    }
-    //cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
-    //cell.backgroundColor = [UIColor whiteColor];
-    //cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    cell.backgroundColor = [self.array objectAtIndex:indexPath.row];
     return cell;
 }
 
 //if you click on a cell what do you do
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //SKShapeNode *ball;
-
-    //STBGameScene *stbGame = [[STBGameScene alloc]init];
-    SKShapeNode *test = [[SKShapeNode alloc] init];
-
-    tempBall = test;
-    tempBall.fillColor = [SKColor redColor];
     
-    //stbGame.ball.fillColor = [SKColor whiteColor];
+    STBAppDelegate *appDelegate = (STBAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [appDelegate setBallColour:[self.array objectAtIndex:indexPath.row]];
     NSLog(@"CLICKED");
     
-    //stbGame.ball = [[SKShapeNode alloc] init];
-    //stbGame.ball.fillColor = [SKColor whiteColor];
-    
-    
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"STBGameScene"]){
-        STBGameScene *dest = segue.destinationViewController;
-        dest.changedcolorball.fillColor = tempBall.fillColor;
-    }
-}
-
 
 /*
 #pragma mark - Navigation

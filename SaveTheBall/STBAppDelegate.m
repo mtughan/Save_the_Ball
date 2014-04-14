@@ -11,7 +11,7 @@
 #import "STBData.h"
 
 @implementation STBAppDelegate
-@synthesize databaseName, databasePath, player;
+@synthesize databaseName, databasePath, player, ballColour;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -27,6 +27,13 @@
     
     // read data from the database
     [self readFromDatabase];
+    
+    NSData *colourData = [[NSUserDefaults standardUserDefaults] objectForKey:@"ballColour"];
+    if(colourData == nil) {
+        self.ballColour = [UIColor redColor];
+    } else {
+        ballColour = [NSKeyedUnarchiver unarchiveObjectWithData:colourData];
+    }
     
     return YES;
 }
@@ -129,6 +136,13 @@
         sqlite3_finalize(compiledStatement);
     }
     sqlite3_close(database);
+}
+
+- (void)setBallColour:(UIColor *)colour {
+    ballColour = colour;
+    
+    NSData *colourData = [NSKeyedArchiver archivedDataWithRootObject:colour];
+    [[NSUserDefaults standardUserDefaults] setObject:colourData forKey:@"ballColour"];
 }
 
 @end
