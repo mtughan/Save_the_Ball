@@ -14,6 +14,7 @@ static const int paddleLength = 50, paddleHeight = 10;
 
 static double ballVelocity = 270;
 static const double maxBallVelocity = 1000;
+static const double speedupPercent = 5;
 
 static const uint32_t ballCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
@@ -192,7 +193,7 @@ static NSString *bottomWallName = @"bottom wall";
 //    NSLog(@"contact ended between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
     if(contact.bodyA.node == self.paddle || contact.bodyB.node == self.paddle) {
         double angle = [self radianAngleFromVector:self.ball.physicsBody.velocity];
-        ballVelocity *= 1.05;
+        ballVelocity *= 1 + speedupPercent / 100.;
         if(ballVelocity > maxBallVelocity) {
             ballVelocity = maxBallVelocity;
         }
