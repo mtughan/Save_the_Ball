@@ -8,6 +8,7 @@
 
 #import "STBGameScene.h"
 #import "STBOptionsViewController.h"
+#import "STBAppDelegate.h"
 
 static const int ballRadius = 10;
 static const int paddleLength = 50;
@@ -46,9 +47,7 @@ static NSString *bottomWallName = @"bottom wall";
         // Ball
         self.ball = [[SKShapeNode alloc] init];
         self.ball.name = ballName;
-        self.ball.fillColor = self.changedcolorball.fillColor;
-        //self.ball.fillColor = [SKColor whiteColor];
-        //self.ball.fillColor = [SKColor redColor];
+        self.ball.strokeColor = self.ball.fillColor = [(STBAppDelegate *)[[UIApplication sharedApplication] delegate] ballColour];
         
         CGPathRef circle = CGPathCreateWithEllipseInRect(CGRectMake(-ballRadius, -ballRadius, ballRadius * 2, ballRadius * 2), NULL);
         self.ball.path = circle;

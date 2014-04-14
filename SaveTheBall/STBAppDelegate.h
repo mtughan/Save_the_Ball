@@ -13,6 +13,8 @@
     NSString *databaseName;
     NSString *databasePath;
     NSMutableArray *player;
+    
+    UIColor *ballColour;
 }
 
 @property (strong, nonatomic) UIWindow *window;
@@ -21,9 +23,12 @@
 @property (strong, nonatomic) NSString *databasePath;
 @property (strong, nonatomic) NSMutableArray *player;
 
+@property (setter = setBallColour:, nonatomic) UIColor *ballColour;
+
 -(void)checkAndCreateDatabase;
 -(void)readFromDatabase;
 -(void)insertIntoDatabase:(NSString *)name andScore:(NSString *)score;
 
+- (void)setBallColour:(UIColor *)colour;
 
 @end
