@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface STBHighScoreViewController : UIViewController
+@interface STBHighScoreViewController : UIViewController <UITableViewDataSource>
 
 @end

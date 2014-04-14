@@ -27,6 +27,7 @@
 		0E6F46C818E0713500D3D57A /* STBGameBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F46C718E0713500D3D57A /* STBGameBlock.m */; };
 		0ECE73E718FC22DF00A6D4D0 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE73E518FC22DF00A6D4D0 /* pause.png */; };
 		0ECE73E818FC22DF00A6D4D0 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE73E618FC22DF00A6D4D0 /* pause@2x.png */; };
+		0ECE73EB18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */; };
 		AB17A1FA18E06C980039BA91 /* STBOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */; };
 		AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */; };
 		CB1321D818F89DD700BB2FA2 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1321D718F89DD700BB2FA2 /* libsqlite3.0.dylib */; };
@@ -84,6 +85,8 @@
 		0E6F46C718E0713500D3D57A /* STBGameBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBGameBlock.m; path = SaveTheBall/STBGameBlock.m; sourceTree = "<group>"; };
 		0ECE73E518FC22DF00A6D4D0 /* pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = pause.png; path = SaveTheBall/images/pause.png; sourceTree = "<group>"; };
 		0ECE73E618FC22DF00A6D4D0 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause@2x.png"; path = "SaveTheBall/images/pause@2x.png"; sourceTree = "<group>"; };
+		0ECE73E918FC499D00A6D4D0 /* STBHighScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBHighScoreTableViewCell.h; sourceTree = "<group>"; };
+		0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBHighScoreTableViewCell.m; sourceTree = "<group>"; };
 		AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBOptionsViewController.h; path = SaveTheBall/STBOptionsViewController.h; sourceTree = "<group>"; };
 		AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBOptionsViewController.m; path = SaveTheBall/STBOptionsViewController.m; sourceTree = "<group>"; };
 		AB17A1FB18E06CB60039BA91 /* STBHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBHighScoreViewController.h; path = SaveTheBall/STBHighScoreViewController.h; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 				CB1321DB18F89EBF00BB2FA2 /* STBData.h */,
 				CB1321DC18F89EBF00BB2FA2 /* STBData.m */,
+				0ECE73E918FC499D00A6D4D0 /* STBHighScoreTableViewCell.h */,
+				0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */,
 			);
 			path = SaveTheBall;
 			sourceTree = "<group>";
@@ -393,6 +398,7 @@
 				CB1321DD18F89EBF00BB2FA2 /* STBData.m in Sources */,
 				AB17A1FA18E06C980039BA91 /* STBOptionsViewController.m in Sources */,
 				0E69D1F818D6AD0900CDA858 /* main.m in Sources */,
+				0ECE73EB18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

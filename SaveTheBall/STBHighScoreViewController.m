@@ -7,43 +7,37 @@
 //
 
 #import "STBHighScoreViewController.h"
+#import "STBHighScoreTableViewCell.h"
+#import "STBAppDelegate.h"
+#import "STBData.h"
 
 @interface STBHighScoreViewController ()
-
+{
+    NSArray *highScores;
+}
 @end
 
 @implementation STBHighScoreViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    STBAppDelegate *appDelegate = (STBAppDelegate *)[[UIApplication sharedApplication] delegate];
+    highScores = [appDelegate player];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [highScores count];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    STBHighScoreTableViewCell *cell = (STBHighScoreTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"HighScore"];
+    
+    STBData *highScore = [highScores objectAtIndex:indexPath.row];
+    cell.name.text = highScore.name;
+    cell.score.text = [NSString stringWithFormat:@"%d", highScore.score];
+    
+    return cell;
 }
-*/
 
 @end
