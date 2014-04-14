@@ -96,7 +96,17 @@ static NSString *bottomWallName = @"bottom wall";
         
         self.paddle.physicsBody = paddlePhysics;
         
-
+        // Bottom wall (game ending wall)
+        self.bottomWall = [[SKShapeNode alloc] init];
+        self.bottomWall.name = bottomWallName;
+        [self addChild:self.bottomWall];
+        
+        // Bottom wall physics (for collision detection)
+        SKPhysicsBody *bottomWallPhysics = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(self.frame.size.width, 0)];
+        bottomWallPhysics.categoryBitMask = bottomWallCategory;
+        bottomWallPhysics.collisionBitMask = ballCategory;
+        bottomWallPhysics.contactTestBitMask = ballCategory;
+        self.bottomWall.physicsBody = bottomWallPhysics;
     }
     return self;
 }

@@ -13,6 +13,7 @@
 
 @property (strong, nonatomic) SKShapeNode *ball;
 @property (strong, nonatomic) SKShapeNode *paddle;
+@property (strong, nonatomic) SKShapeNode *bottomWall;
 @property (nonatomic) BOOL touchPaddle;
 
 @end
