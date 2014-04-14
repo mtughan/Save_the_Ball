@@ -119,16 +119,17 @@ static NSString *bottomWallName = @"bottom wall";
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInNode:self];
+    self.view.paused = NO;
     
-    SKPhysicsBody *body = [self.physicsWorld bodyAtPoint:touchLocation];
-    if (body && [body.node.name isEqualToString: paddleName])
+    UITouch *touch = [touches anyObject];
+    
+    CGPoint touchLocation = [touch locationInNode:self.paddle];
+    int margin = paddleHeight / 2 + 30;
+    if(touchLocation.y > -margin && touchLocation.y < margin)
     {
         self.touchPaddle = YES;
     }
     
-    self.view.paused = NO;
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
