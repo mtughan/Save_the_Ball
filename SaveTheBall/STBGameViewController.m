@@ -36,8 +36,8 @@
     // Configure the view.
     skView = (SKView *)self.view;
     if(!skView.scene) {
-        skView.showsFPS = YES;
-        skView.showsNodeCount = YES;
+//        skView.showsFPS = YES;
+//        skView.showsNodeCount = YES;
         skView.paused = YES;
         
         // Create and configure the scene.
