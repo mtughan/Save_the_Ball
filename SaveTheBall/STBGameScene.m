@@ -11,7 +11,7 @@
 #import "STBAppDelegate.h"
 
 static const int ballRadius = 10;
-static const int paddleLength = 50;
+static const int paddleLength = 50, paddleHeight = 10;
 
 static const uint32_t ballCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
@@ -77,12 +77,12 @@ static NSString *bottomWallName = @"bottom wall";
         self.paddle.name = paddleName;
         self.paddle.fillColor = [SKColor yellowColor];
         
-        CGPathRef rect = CGPathCreateWithRect(CGRectMake(-paddleLength+25, 0, paddleLength, 10), NULL);
+        CGPathRef rect = CGPathCreateWithRect(CGRectMake(-(paddleLength / 2.), -(paddleHeight / 2.), paddleLength, paddleHeight), NULL);
         self.paddle.path = rect;
         [self addChild:self.paddle];
         CGPathRelease(rect);
         
-        self.paddle.position = CGPointMake(x, 30);
+        self.paddle.position = CGPointMake(x, 30 + (paddleHeight / 2.));
         
         //Paddle Physics
         SKPhysicsBody *paddlePhysics = [SKPhysicsBody bodyWithRectangleOfSize:paddle.frame.size];
