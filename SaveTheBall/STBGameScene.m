@@ -25,7 +25,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball, paddle, touchPaddle;
+@synthesize ball, paddle, touchPaddle,touchBottomWall;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -150,6 +150,10 @@ static NSString *bottomWallName = @"bottom wall";
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
     NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
+    if([contact.bodyA.node.name isEqualToString: bottomWallName]){
+        NSLog(@"CONTACT");
+        self.view.paused = YES;
+    }
 }
 
 - (void)didEndContact:(SKPhysicsContact *)contact {
