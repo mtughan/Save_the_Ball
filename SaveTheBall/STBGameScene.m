@@ -25,7 +25,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball, paddle, touchPaddle;
+@synthesize ball, paddle, bottomWall, pauseButton, touchPaddle;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -107,6 +107,12 @@ static NSString *bottomWallName = @"bottom wall";
         bottomWallPhysics.collisionBitMask = ballCategory;
         bottomWallPhysics.contactTestBitMask = ballCategory;
         self.bottomWall.physicsBody = bottomWallPhysics;
+        
+        // Pause button
+        self.pauseButton = [SKSpriteNode spriteNodeWithImageNamed:@"pause"];
+        [self addChild:pauseButton];
+        self.pauseButton.anchorPoint = CGPointMake(1, 0);
+        self.pauseButton.position = CGPointMake(CGRectGetWidth(self.frame) - 10, 10);
     }
     return self;
 }
