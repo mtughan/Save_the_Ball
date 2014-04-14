@@ -118,7 +118,7 @@
     sqlite3 *database;
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
     {
-        const char *sqlStatement = "INSERT INTO user (name, score) VALUES (?, ?);";
+        const char *sqlStatement = "INSERT INTO players (name, score) VALUES (?, ?);";
         sqlite3_stmt *compiledStatement;
         int retval = sqlite3_prepare_v2(database, sqlStatement, -1, &compiledStatement, NULL);
         if (retval == SQLITE_OK)
