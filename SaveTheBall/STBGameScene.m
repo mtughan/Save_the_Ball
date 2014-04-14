@@ -7,7 +7,6 @@
 //
 
 #import "STBGameScene.h"
-#import "STBOptionsViewController.h"
 #import "STBAppDelegate.h"
 
 static const int ballRadius = 10;
@@ -26,6 +25,7 @@ static NSString *bottomWallName = @"bottom wall";
 @implementation STBGameScene
 
 @synthesize ball, paddle, bottomWall, pauseButton, touchPaddle;
+@synthesize delegate;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -136,7 +136,7 @@ static NSString *bottomWallName = @"bottom wall";
     if(touchLocation.x > -margin && touchLocation.x < 10 &&
        touchLocation.y > -10 && touchLocation.y < margin) {
         // pause touched
-        [self pauseGame];
+        [self.delegate pauseGame];
         self.touchPaddle = NO;
     }
 }
@@ -164,15 +164,11 @@ static NSString *bottomWallName = @"bottom wall";
     /* Called before each frame is rendered */
 }
 
-- (void)pauseGame {
-    self.view.paused = YES;
-}
-
 - (void)didBeginContact:(SKPhysicsContact *)contact {
     NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
-    if([contact.bodyA.node.name isEqualToString: bottomWallName]){
-        //NSLog(@"CONTACT");
-        self.view.paused = YES;
+    if([contact.bodyA.node.name isEqualToString: bottomWallName])
+    {
+        [self.delegate endGame:0];
     }
 }
 

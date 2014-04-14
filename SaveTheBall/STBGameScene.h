@@ -7,7 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
-#import "STBOptionsViewController.h"
+#import "STBGameViewController.h"
 
 @interface STBGameScene : SKScene <SKPhysicsContactDelegate>
 
@@ -16,5 +16,7 @@
 @property (strong, nonatomic) SKShapeNode *bottomWall;
 @property (strong, nonatomic) SKSpriteNode *pauseButton;
 @property (nonatomic) BOOL touchPaddle;
+
+@property (weak, nonatomic) STBGameViewController *delegate;
 
 @end
