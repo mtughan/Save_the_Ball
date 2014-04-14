@@ -140,7 +140,6 @@ static NSString *bottomWallName = @"bottom wall";
     
     touchLocation = [touch locationInNode:self.pauseButton];
     margin = self.pauseButton.size.width + 10;
-    NSLog(@"x = %f, y = %f", touchLocation.x, touchLocation.y);
     if(touchLocation.x > -margin && touchLocation.x < 10 &&
        touchLocation.y > -margin && touchLocation.y < 10) {
         // pause touched
@@ -173,7 +172,7 @@ static NSString *bottomWallName = @"bottom wall";
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
-    NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
+//    NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
     if(contact.bodyA.node == self.bottomWall || contact.bodyB.node == self.bottomWall)
     {
         [self.delegate endGame:score];
@@ -185,7 +184,7 @@ static NSString *bottomWallName = @"bottom wall";
 }
 
 - (void)didEndContact:(SKPhysicsContact *)contact {
-    NSLog(@"contact ended between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
+//    NSLog(@"contact ended between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
 }
 
 @end
