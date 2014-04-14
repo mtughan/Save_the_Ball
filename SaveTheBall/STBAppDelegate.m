@@ -90,7 +90,7 @@
     
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
     {
-        const char *sqlStatement = "SELECT * FROM players ORDER BY score DESC";
+        const char *sqlStatement = "SELECT * FROM players ORDER BY score ASC";
         sqlite3_stmt *compiledStatement;
         
         if(sqlite3_prepare(database, sqlStatement, -1, &compiledStatement, NULL)==SQLITE_OK)
