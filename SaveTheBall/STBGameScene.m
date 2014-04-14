@@ -76,7 +76,9 @@ static NSString *bottomWallName = @"bottom wall";
         ballPhysics.contactTestBitMask = bottomWallCategory | paddleCategory;
         
         self.ball.physicsBody = ballPhysics;
-        [self.ball.physicsBody applyImpulse:CGVectorMake(-3.0f, 3.0f)];
+        int multiplier = random() % 2 == 0 ? 1 : -1;
+        double angle = ((double)rand()) / RAND_MAX / 2 + 0.5;
+        [self.ball.physicsBody applyImpulse:[self vectorFromRadianAngle:angle * multiplier andVelocity:4]];
         
         //Paddle
         self.paddle = [[SKShapeNode alloc] init];
@@ -185,6 +187,12 @@ static NSString *bottomWallName = @"bottom wall";
 
 - (void)didEndContact:(SKPhysicsContact *)contact {
 //    NSLog(@"contact ended between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
+}
+
+- (CGVector)vectorFromRadianAngle:(double)angle andVelocity:(double)velocity {
+    double x = sin(angle) * velocity;
+    double y = cos(angle) * velocity;
+    return CGVectorMake(x, y);
 }
 
 @end
