@@ -11,7 +11,7 @@
 #import "STBAppDelegate.h"
 
 static const int ballRadius = 10;
-static const int paddleLength = 50;
+static const int paddleLength = 50, paddleHeight = 10;
 
 static const uint32_t ballCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
@@ -25,7 +25,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball, paddle, touchPaddle,touchBottomWall;
+@synthesize ball, paddle, bottomWall, pauseButton, touchPaddle,touchBottomWall;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -77,12 +77,12 @@ static NSString *bottomWallName = @"bottom wall";
         self.paddle.name = paddleName;
         self.paddle.fillColor = [SKColor yellowColor];
         
-        CGPathRef rect = CGPathCreateWithRect(CGRectMake(-paddleLength+25, 0, paddleLength, 10), NULL);
+        CGPathRef rect = CGPathCreateWithRect(CGRectMake(-(paddleLength / 2.), -(paddleHeight / 2.), paddleLength, paddleHeight), NULL);
         self.paddle.path = rect;
         [self addChild:self.paddle];
         CGPathRelease(rect);
         
-        self.paddle.position = CGPointMake(x, 30);
+        self.paddle.position = CGPointMake(x, 30 + (paddleHeight / 2.));
         
         //Paddle Physics
         SKPhysicsBody *paddlePhysics = [SKPhysicsBody bodyWithRectangleOfSize:paddle.frame.size];
@@ -102,27 +102,43 @@ static NSString *bottomWallName = @"bottom wall";
         [self addChild:self.bottomWall];
         
         // Bottom wall physics (for collision detection)
-        SKPhysicsBody *bottomWallPhysics = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(self.frame.size.width, 0)];
+        SKPhysicsBody *bottomWallPhysics = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(CGRectGetWidth(self.frame), 0)];
         bottomWallPhysics.categoryBitMask = bottomWallCategory;
         bottomWallPhysics.collisionBitMask = ballCategory;
         bottomWallPhysics.contactTestBitMask = ballCategory;
         self.bottomWall.physicsBody = bottomWallPhysics;
+        
+        // Pause button
+        self.pauseButton = [SKSpriteNode spriteNodeWithImageNamed:@"pause"];
+        [self addChild:pauseButton];
+        self.pauseButton.anchorPoint = CGPointMake(1, 0);
+        self.pauseButton.position = CGPointMake(CGRectGetWidth(self.frame) - 10, 10);
     }
     return self;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
-    UITouch *touch = [touches anyObject];
-    CGPoint touchLocation = [touch locationInNode:self];
+    self.view.paused = NO;
     
-    SKPhysicsBody *body = [self.physicsWorld bodyAtPoint:touchLocation];
-    if (body && [body.node.name isEqualToString: paddleName])
+    UITouch *touch = [touches anyObject];
+    
+    CGPoint touchLocation = [touch locationInNode:self.paddle];
+    int margin = paddleHeight / 2 + 30;
+    if(touchLocation.y > -margin && touchLocation.y < margin)
     {
         self.touchPaddle = YES;
     }
     
-    self.view.paused = NO;
+    touchLocation = [touch locationInNode:self.pauseButton];
+    margin = self.pauseButton.size.width + 10;
+    NSLog(@"x = %f, y = %f", touchLocation.x, touchLocation.y);
+    if(touchLocation.x > -margin && touchLocation.x < 10 &&
+       touchLocation.y > -10 && touchLocation.y < margin) {
+        // pause touched
+        [self pauseGame];
+        self.touchPaddle = NO;
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -146,6 +162,10 @@ static NSString *bottomWallName = @"bottom wall";
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+}
+
+- (void)pauseGame {
+    self.view.paused = YES;
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {

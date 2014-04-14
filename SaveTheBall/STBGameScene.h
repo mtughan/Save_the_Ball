@@ -14,6 +14,7 @@
 @property (strong, nonatomic) SKShapeNode *ball;
 @property (strong, nonatomic) SKShapeNode *paddle;
 @property (strong, nonatomic) SKShapeNode *bottomWall;
+@property (strong, nonatomic) SKSpriteNode *pauseButton;
 @property (nonatomic) BOOL touchPaddle;
 @property (nonatomic) BOOL touchBottomWall;
 
