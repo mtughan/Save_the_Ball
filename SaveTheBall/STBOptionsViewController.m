@@ -75,7 +75,7 @@
     
     STBAppDelegate *appDelegate = (STBAppDelegate *)[[UIApplication sharedApplication] delegate];
     [appDelegate setBallColour:[self.array objectAtIndex:indexPath.row]];
-    NSLog(@"CLICKED");
+    //NSLog(@"CLICKED");
     
 }
 

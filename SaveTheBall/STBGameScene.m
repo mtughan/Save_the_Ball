@@ -171,7 +171,7 @@ static NSString *bottomWallName = @"bottom wall";
 - (void)didBeginContact:(SKPhysicsContact *)contact {
     NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
     if([contact.bodyA.node.name isEqualToString: bottomWallName]){
-        NSLog(@"CONTACT");
+        //NSLog(@"CONTACT");
         self.view.paused = YES;
     }
 }
