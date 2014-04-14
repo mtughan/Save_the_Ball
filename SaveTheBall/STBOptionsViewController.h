@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "STBGameScene.h"
 
 @interface STBOptionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSArray *array;
+
 @end

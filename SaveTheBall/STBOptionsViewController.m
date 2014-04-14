@@ -7,12 +7,14 @@
 //
 
 #import "STBOptionsViewController.h"
+#import "STBGameScene.h"
 
 @interface STBOptionsViewController ()
-
+    
 @end
 
 @implementation STBOptionsViewController
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,7 +29,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.array = [[NSArray alloc]initWithObjects:@"1", @"2", @"3", @"4", nil];
+    self.array = [[NSArray alloc]initWithObjects:@"1", @"2", @"3", @"4",@"5",@"6", nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,10 +56,51 @@
     if (!cell) {
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
     }
-    cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
-    cell.accessoryType = UITableViewCellAccessoryDetailButton;
+    if(indexPath.row == 0){
+        cell.backgroundColor = [UIColor redColor];
+        
+    }
+    else if(indexPath.row == 1){
+        cell.backgroundColor = [UIColor blueColor];
+
+    }
+    else if(indexPath.row == 2){
+        cell.backgroundColor = [UIColor purpleColor];
+        
+    }
+    else if(indexPath.row == 3){
+        cell.backgroundColor = [UIColor orangeColor];
+        
+    }
+    else if(indexPath.row == 4){
+        cell.backgroundColor = [UIColor whiteColor];
+        
+    }
+    else if(indexPath.row == 5){
+        cell.backgroundColor = [UIColor magentaColor];
+        
+    }
+    //cell.textLabel.text = [self.array objectAtIndex:indexPath.row];
+    //cell.backgroundColor = [UIColor whiteColor];
+    //cell.accessoryType = UITableViewCellAccessoryDetailButton;
     return cell;
 }
+
+//if you click on a cell what do you do
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //SKShapeNode *ball;
+    STBGameScene *stbGame;
+    stbGame = [[STBGameScene alloc]init];
+    stbGame.ball.fillColor = [SKColor whiteColor];
+    NSLog(@"CLICKED");
+    
+    //stbGame.ball = [[SKShapeNode alloc] init];
+    //stbGame.ball.fillColor = [SKColor whiteColor];
+    
+    
+}
+
 
 /*
 #pragma mark - Navigation

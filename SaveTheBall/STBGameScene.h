@@ -7,6 +7,7 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "STBOptionsViewController.h"
 
 @interface STBGameScene : SKScene <SKPhysicsContactDelegate>
 
