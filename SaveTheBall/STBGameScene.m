@@ -25,7 +25,7 @@ static NSString *bottomWallName = @"bottom wall";
 
 @implementation STBGameScene
 
-@synthesize ball, paddle, bottomWall, pauseButton, touchPaddle,touchBottomWall;
+@synthesize ball, paddle, bottomWall, pauseButton, touchPaddle;
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
