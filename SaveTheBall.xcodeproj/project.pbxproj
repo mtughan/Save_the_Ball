@@ -192,11 +192,11 @@
 				0E69D20618D6AD0900CDA858 /* Spaceship.png */,
 				0E69D1FA18D6AD0900CDA858 /* STBAppDelegate.h */,
 				0E69D1FB18D6AD0900CDA858 /* STBAppDelegate.m */,
-				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 				CB1321DB18F89EBF00BB2FA2 /* STBData.h */,
 				CB1321DC18F89EBF00BB2FA2 /* STBData.m */,
 				0ECE73E918FC499D00A6D4D0 /* STBHighScoreTableViewCell.h */,
 				0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */,
+				0E69D1F218D6AD0900CDA858 /* Supporting Files */,
 			);
 			path = SaveTheBall;
 			sourceTree = "<group>";
