@@ -84,12 +84,16 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    NSLog(@"button clicked: %d", buttonIndex);
+    if((alertView == self.pauseAlert && buttonIndex == 1) ||
+       alertView == self.endAlert)
+    {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-    if(alertView == self.pauseAlert) {
+    if(alertView == self.pauseAlert && buttonIndex == 0) {
         skView.paused = NO;
     }
 }
