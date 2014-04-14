@@ -29,6 +29,4 @@
 -(void)readFromDatabase;
 -(void)insertIntoDatabase:(NSString *)name andScore:(NSString *)score;
 
-- (void)setBallColour:(UIColor *)colour;
-
 @end
