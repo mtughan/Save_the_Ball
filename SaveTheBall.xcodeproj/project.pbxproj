@@ -33,6 +33,7 @@
 		CB1321DA18F89DDF00BB2FA2 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1321D918F89DDF00BB2FA2 /* libsqlite3.dylib */; };
 		CB1321DD18F89EBF00BB2FA2 /* STBData.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1321DC18F89EBF00BB2FA2 /* STBData.m */; };
 		CB1321DF18F8A40800BB2FA2 /* STB.DB in Resources */ = {isa = PBXBuildFile; fileRef = CB1321DE18F8A40800BB2FA2 /* STB.DB */; };
+		CB21B40918FC369D0001F67B /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = CB21B40818FC369D0001F67B /* background.png */; };
 		CB71413218DFCAC60025270C /* STBMainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413118DFCAC60025270C /* STBMainMenuViewController.m */; };
 		CB71413518DFCB4A0025270C /* button-long.png in Resources */ = {isa = PBXBuildFile; fileRef = CB71413418DFCB4A0025270C /* button-long.png */; };
 		CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413718DFCF330025270C /* STBSocialViewController.m */; };
@@ -43,7 +44,6 @@
 		CBF386A618FB2EEF0026AC55 /* nyan_cat_icon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386A518FB2EEF0026AC55 /* nyan_cat_icon_60.png */; };
 		CBF386A918FB2F7C0026AC55 /* nyan_cat_icon_40.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386A818FB2F7C0026AC55 /* nyan_cat_icon_40.png */; };
 		CBF386AB18FB2FCC0026AC55 /* nyan_cat_icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386AA18FB2FCC0026AC55 /* nyan_cat_icon_29.png */; };
-		CBF386AD18FB36850026AC55 /* social.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386AC18FB36850026AC55 /* social.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +93,7 @@
 		CB1321DB18F89EBF00BB2FA2 /* STBData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBData.h; sourceTree = "<group>"; };
 		CB1321DC18F89EBF00BB2FA2 /* STBData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBData.m; sourceTree = "<group>"; };
 		CB1321DE18F8A40800BB2FA2 /* STB.DB */ = {isa = PBXFileReference; lastKnownFileType = file; name = STB.DB; path = SaveTheBall/STB.DB; sourceTree = "<group>"; };
+		CB21B40818FC369D0001F67B /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = SaveTheBall/images/background.png; sourceTree = "<group>"; };
 		CB71413018DFCAC60025270C /* STBMainMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBMainMenuViewController.h; path = SaveTheBall/STBMainMenuViewController.h; sourceTree = "<group>"; };
 		CB71413118DFCAC60025270C /* STBMainMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBMainMenuViewController.m; path = SaveTheBall/STBMainMenuViewController.m; sourceTree = "<group>"; };
 		CB71413418DFCB4A0025270C /* button-long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "button-long.png"; path = "SaveTheBall/images/button-long.png"; sourceTree = "<group>"; };
@@ -106,7 +107,6 @@
 		CBF386A518FB2EEF0026AC55 /* nyan_cat_icon_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_icon_60.png; path = SaveTheBall/images/nyan_cat_icon_60.png; sourceTree = "<group>"; };
 		CBF386A818FB2F7C0026AC55 /* nyan_cat_icon_40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_icon_40.png; path = SaveTheBall/images/nyan_cat_icon_40.png; sourceTree = "<group>"; };
 		CBF386AA18FB2FCC0026AC55 /* nyan_cat_icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_icon_29.png; path = SaveTheBall/images/nyan_cat_icon_29.png; sourceTree = "<group>"; };
-		CBF386AC18FB36850026AC55 /* social.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = social.png; path = SaveTheBall/images/social.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -261,9 +261,9 @@
 		CB71413318DFCB3C0025270C /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CB21B40818FC369D0001F67B /* background.png */,
 				0ECE73E518FC22DF00A6D4D0 /* pause.png */,
 				0ECE73E618FC22DF00A6D4D0 /* pause@2x.png */,
-				CBF386AC18FB36850026AC55 /* social.png */,
 				CBF386AA18FB2FCC0026AC55 /* nyan_cat_icon_29.png */,
 				CBF386A818FB2F7C0026AC55 /* nyan_cat_icon_40.png */,
 				CBF386A518FB2EEF0026AC55 /* nyan_cat_icon_60.png */,
@@ -360,7 +360,7 @@
 				CBF386A218FB2A690026AC55 /* nyan_cat_960_load.png in Resources */,
 				CB71413518DFCB4A0025270C /* button-long.png in Resources */,
 				CB1321DF18F8A40800BB2FA2 /* STB.DB in Resources */,
-				CBF386AD18FB36850026AC55 /* social.png in Resources */,
+				CB21B40918FC369D0001F67B /* background.png in Resources */,
 				CBF386A018FB29B50026AC55 /* nyan_cat_1136_load.png in Resources */,
 				0E69D20718D6AD0900CDA858 /* Spaceship.png in Resources */,
 				0E69D1FF18D6AD0900CDA858 /* Main.storyboard in Resources */,
