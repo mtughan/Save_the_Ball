@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
-#import <Accounts/Accounts.h>
 
 @interface STBSocialViewController : UIViewController
 {

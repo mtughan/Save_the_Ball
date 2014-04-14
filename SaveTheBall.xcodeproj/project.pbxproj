@@ -41,7 +41,6 @@
 		CB71413518DFCB4A0025270C /* button-long.png in Resources */ = {isa = PBXBuildFile; fileRef = CB71413418DFCB4A0025270C /* button-long.png */; };
 		CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB71413718DFCF330025270C /* STBSocialViewController.m */; };
 		CB71413A18DFD06A0025270C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413918DFD06A0025270C /* Social.framework */; };
-		CB71413C18DFD0840025270C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB71413B18DFD0840025270C /* Accounts.framework */; };
 		CBF386A018FB29B50026AC55 /* nyan_cat_1136_load.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF3869F18FB29B50026AC55 /* nyan_cat_1136_load.png */; };
 		CBF386A218FB2A690026AC55 /* nyan_cat_960_load.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386A118FB2A690026AC55 /* nyan_cat_960_load.png */; };
 		CBF386A618FB2EEF0026AC55 /* nyan_cat_icon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = CBF386A518FB2EEF0026AC55 /* nyan_cat_icon_60.png */; };
@@ -109,8 +108,6 @@
 		CB71413618DFCF330025270C /* STBSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBSocialViewController.h; path = SaveTheBall/STBSocialViewController.h; sourceTree = "<group>"; };
 		CB71413718DFCF330025270C /* STBSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBSocialViewController.m; path = SaveTheBall/STBSocialViewController.m; sourceTree = "<group>"; };
 		CB71413918DFD06A0025270C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		CB71413B18DFD0840025270C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		CB8C5B9918DFD74B009BEC51 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		CBF3869F18FB29B50026AC55 /* nyan_cat_1136_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_1136_load.png; path = SaveTheBall/images/nyan_cat_1136_load.png; sourceTree = "<group>"; };
 		CBF386A118FB2A690026AC55 /* nyan_cat_960_load.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_960_load.png; path = SaveTheBall/images/nyan_cat_960_load.png; sourceTree = "<group>"; };
 		CBF386A518FB2EEF0026AC55 /* nyan_cat_icon_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nyan_cat_icon_60.png; path = SaveTheBall/images/nyan_cat_icon_60.png; sourceTree = "<group>"; };
@@ -125,7 +122,6 @@
 			files = (
 				CB1321DA18F89DDF00BB2FA2 /* libsqlite3.dylib in Frameworks */,
 				CB1321D818F89DD700BB2FA2 /* libsqlite3.0.dylib in Frameworks */,
-				CB71413C18DFD0840025270C /* Accounts.framework in Frameworks */,
 				CB71413A18DFD06A0025270C /* Social.framework in Frameworks */,
 				0E69D1EC18D6AD0800CDA858 /* CoreGraphics.framework in Frameworks */,
 				0E69D1EE18D6AD0800CDA858 /* UIKit.framework in Frameworks */,
@@ -176,12 +172,10 @@
 			children = (
 				CB1321D918F89DDF00BB2FA2 /* libsqlite3.dylib */,
 				CB1321D718F89DD700BB2FA2 /* libsqlite3.0.dylib */,
-				CB71413B18DFD0840025270C /* Accounts.framework */,
 				0E69D1EB18D6AD0800CDA858 /* CoreGraphics.framework */,
 				0E69D1E918D6AD0800CDA858 /* Foundation.framework */,
 				CB71413918DFD06A0025270C /* Social.framework */,
 				0E69D1EF18D6AD0800CDA858 /* SpriteKit.framework */,
-				CB8C5B9918DFD74B009BEC51 /* Twitter.framework */,
 				0E69D1ED18D6AD0800CDA858 /* UIKit.framework */,
 				0E69D20F18D6AD0900CDA858 /* XCTest.framework */,
 			);
