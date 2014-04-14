@@ -293,7 +293,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Eda-Ez-QbA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qvi-Sp-Fo4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qvi-Sp-Fo4" customClass="STBNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xmB-Xg-Pec">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

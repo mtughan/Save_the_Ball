@@ -28,6 +28,7 @@
 		0ECE73E718FC22DF00A6D4D0 /* pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE73E518FC22DF00A6D4D0 /* pause.png */; };
 		0ECE73E818FC22DF00A6D4D0 /* pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE73E618FC22DF00A6D4D0 /* pause@2x.png */; };
 		0ECE73EB18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */; };
+		0EE8A6CD18FC67F200D7F173 /* STBNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EE8A6CC18FC67F200D7F173 /* STBNavigationController.m */; };
 		AB17A1FA18E06C980039BA91 /* STBOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */; };
 		AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */; };
 		CB1321D818F89DD700BB2FA2 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1321D718F89DD700BB2FA2 /* libsqlite3.0.dylib */; };
@@ -88,6 +89,8 @@
 		0ECE73E618FC22DF00A6D4D0 /* pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause@2x.png"; path = "SaveTheBall/images/pause@2x.png"; sourceTree = "<group>"; };
 		0ECE73E918FC499D00A6D4D0 /* STBHighScoreTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STBHighScoreTableViewCell.h; sourceTree = "<group>"; };
 		0ECE73EA18FC499D00A6D4D0 /* STBHighScoreTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STBHighScoreTableViewCell.m; sourceTree = "<group>"; };
+		0EE8A6CB18FC67F200D7F173 /* STBNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBNavigationController.h; path = SaveTheBall/STBNavigationController.h; sourceTree = "<group>"; };
+		0EE8A6CC18FC67F200D7F173 /* STBNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBNavigationController.m; path = SaveTheBall/STBNavigationController.m; sourceTree = "<group>"; };
 		AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBOptionsViewController.h; path = SaveTheBall/STBOptionsViewController.h; sourceTree = "<group>"; };
 		AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STBOptionsViewController.m; path = SaveTheBall/STBOptionsViewController.m; sourceTree = "<group>"; };
 		AB17A1FB18E06CB60039BA91 /* STBHighScoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STBHighScoreViewController.h; path = SaveTheBall/STBHighScoreViewController.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				AB17A1FC18E06CB60039BA91 /* STBHighScoreViewController.m */,
 				CB71413018DFCAC60025270C /* STBMainMenuViewController.h */,
 				CB71413118DFCAC60025270C /* STBMainMenuViewController.m */,
+				0EE8A6CB18FC67F200D7F173 /* STBNavigationController.h */,
+				0EE8A6CC18FC67F200D7F173 /* STBNavigationController.m */,
 				AB17A1F818E06C980039BA91 /* STBOptionsViewController.h */,
 				AB17A1F918E06C980039BA91 /* STBOptionsViewController.m */,
 				CB71413618DFCF330025270C /* STBSocialViewController.h */,
@@ -398,6 +403,7 @@
 				0E69D20218D6AD0900CDA858 /* STBGameViewController.m in Sources */,
 				CB21B40C18FC54900001F67B /* STBWebViewController.m in Sources */,
 				AB17A1FD18E06CB60039BA91 /* STBHighScoreViewController.m in Sources */,
+				0EE8A6CD18FC67F200D7F173 /* STBNavigationController.m in Sources */,
 				CB71413818DFCF330025270C /* STBSocialViewController.m in Sources */,
 				0E6F46C818E0713500D3D57A /* STBGameBlock.m in Sources */,
 				0E69D1FC18D6AD0900CDA858 /* STBAppDelegate.m in Sources */,
