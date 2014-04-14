@@ -130,6 +130,15 @@ static NSString *bottomWallName = @"bottom wall";
         self.touchPaddle = YES;
     }
     
+    touchLocation = [touch locationInNode:self.pauseButton];
+    margin = self.pauseButton.size.width + 10;
+    NSLog(@"x = %f, y = %f", touchLocation.x, touchLocation.y);
+    if(touchLocation.x > -margin && touchLocation.x < 10 &&
+       touchLocation.y > -10 && touchLocation.y < margin) {
+        // pause touched
+        [self pauseGame];
+        self.touchPaddle = NO;
+    }
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -153,6 +162,10 @@ static NSString *bottomWallName = @"bottom wall";
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+}
+
+- (void)pauseGame {
+    self.view.paused = YES;
 }
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
