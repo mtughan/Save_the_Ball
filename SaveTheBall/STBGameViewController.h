@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface STBGameViewController : UIViewController <UIAlertViewDelegate>
+@interface STBGameViewController : UIViewController <UIAlertViewDelegate, UITextFieldDelegate>
 
 @property (strong, nonatomic) UIAlertView *pauseAlert;
 @property (strong, nonatomic) UIAlertView *endAlert;
+@property (strong, nonatomic) UIAlertView *endHighScoreAlert;
 
 - (void)pauseGame;
 - (void)endGame:(int)score;
