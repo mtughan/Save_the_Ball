@@ -141,6 +141,7 @@
         sqlite3_finalize(compiledStatement);
     }
     sqlite3_close(database);
+    [player addObject:[[STBData alloc] initWithData:name andScore:score]];
     if(score > highScore) {
         highScore = score;
     }
