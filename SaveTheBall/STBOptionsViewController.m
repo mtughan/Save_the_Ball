@@ -109,13 +109,6 @@
     
     
 }
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if([segue.identifier isEqualToString:@"STBGameScene"]){
-        STBGameScene *dest = segue.destinationViewController;
-        dest.changedcolorball.fillColor = tempBall.fillColor;
-    }
-}
 
 
 /*
