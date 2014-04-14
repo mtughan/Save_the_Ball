@@ -117,8 +117,8 @@ static NSString *bottomWallName = @"bottom wall";
         // Pause button
         self.pauseButton = [SKSpriteNode spriteNodeWithImageNamed:@"pause"];
         [self addChild:pauseButton];
-        self.pauseButton.anchorPoint = CGPointMake(1, 0);
-        self.pauseButton.position = CGPointMake(CGRectGetWidth(self.frame) - 10, 10);
+        self.pauseButton.anchorPoint = CGPointMake(1, 1);
+        self.pauseButton.position = CGPointMake(CGRectGetWidth(self.frame) - 10, CGRectGetHeight(self.frame) - 10);
         
         score = 0;
     }
@@ -142,7 +142,7 @@ static NSString *bottomWallName = @"bottom wall";
     margin = self.pauseButton.size.width + 10;
     NSLog(@"x = %f, y = %f", touchLocation.x, touchLocation.y);
     if(touchLocation.x > -margin && touchLocation.x < 10 &&
-       touchLocation.y > -10 && touchLocation.y < margin) {
+       touchLocation.y > -margin && touchLocation.y < 10) {
         // pause touched
         [self.delegate pauseGame];
         self.touchPaddle = NO;
