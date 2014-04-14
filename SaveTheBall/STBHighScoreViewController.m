@@ -33,7 +33,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     STBHighScoreTableViewCell *cell = (STBHighScoreTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"HighScore"];
     
-    int index = [highScores count] - 1 - indexPath.row;
+    long index = [highScores count] - 1 - indexPath.row;
     STBData *highScore = [highScores objectAtIndex:index];
     cell.name.text = highScore.name;
     cell.score.text = [NSString stringWithFormat:@"%d", highScore.score];
