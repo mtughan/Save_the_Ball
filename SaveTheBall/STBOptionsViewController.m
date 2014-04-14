@@ -78,10 +78,7 @@
     NSLog(@"CLICKED");
     
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> FETCH_HEAD
 
 /*
 #pragma mark - Navigation
