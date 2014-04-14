@@ -12,6 +12,9 @@
 static const int ballRadius = 10;
 static const int paddleLength = 50, paddleHeight = 10;
 
+static double ballVelocity = 270;
+static const double maxBallVelocity = 1000;
+
 static const uint32_t ballCategory = 0x1 << 0;
 static const uint32_t wallCategory = 0x1 << 1;
 static const uint32_t paddleCategory = 0x1 << 2;
@@ -78,7 +81,7 @@ static NSString *bottomWallName = @"bottom wall";
         self.ball.physicsBody = ballPhysics;
         int multiplier = random() % 2 == 0 ? 1 : -1;
         double angle = ((double)rand()) / RAND_MAX / 2 + 0.5;
-        [self.ball.physicsBody applyImpulse:[self vectorFromRadianAngle:angle * multiplier andVelocity:4]];
+        self.ball.physicsBody.velocity = [self vectorFromRadianAngle:angle * multiplier andVelocity:ballVelocity];
         
         //Paddle
         self.paddle = [[SKShapeNode alloc] init];
@@ -187,12 +190,24 @@ static NSString *bottomWallName = @"bottom wall";
 
 - (void)didEndContact:(SKPhysicsContact *)contact {
 //    NSLog(@"contact ended between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
+    if(contact.bodyA.node == self.paddle || contact.bodyB.node == self.paddle) {
+        double angle = [self radianAngleFromVector:self.ball.physicsBody.velocity];
+        ballVelocity *= 1.05;
+        if(ballVelocity > maxBallVelocity) {
+            ballVelocity = maxBallVelocity;
+        }
+        self.ball.physicsBody.velocity = [self vectorFromRadianAngle:angle andVelocity:ballVelocity];
+    }
 }
 
 - (CGVector)vectorFromRadianAngle:(double)angle andVelocity:(double)velocity {
     double x = sin(angle) * velocity;
     double y = cos(angle) * velocity;
     return CGVectorMake(x, y);
+}
+
+- (double)radianAngleFromVector:(CGVector)vector {
+    return atan(vector.dx / vector.dy);
 }
 
 @end
