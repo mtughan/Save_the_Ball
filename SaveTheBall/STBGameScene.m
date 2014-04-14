@@ -22,6 +22,12 @@ static NSString *wallName = @"wall";
 static NSString *paddleName = @"paddle";
 static NSString *bottomWallName = @"bottom wall";
 
+@interface STBGameScene ()
+{
+    int score;
+}
+@end
+
 @implementation STBGameScene
 
 @synthesize ball, paddle, bottomWall, pauseButton, touchPaddle;
@@ -113,6 +119,8 @@ static NSString *bottomWallName = @"bottom wall";
         [self addChild:pauseButton];
         self.pauseButton.anchorPoint = CGPointMake(1, 0);
         self.pauseButton.position = CGPointMake(CGRectGetWidth(self.frame) - 10, 10);
+        
+        score = 0;
     }
     return self;
 }
@@ -166,9 +174,13 @@ static NSString *bottomWallName = @"bottom wall";
 
 - (void)didBeginContact:(SKPhysicsContact *)contact {
     NSLog(@"contact began between %@ and %@ at (%f, %f)", [contact.bodyA description], [contact.bodyB description], contact.contactPoint.x, contact.contactPoint.y);
-    if([contact.bodyA.node.name isEqualToString: bottomWallName])
+    if(contact.bodyA.node == self.bottomWall || contact.bodyB.node == self.bottomWall)
     {
-        [self.delegate endGame:0];
+        [self.delegate endGame:score];
+    }
+    else if (contact.bodyA.node == self.paddle || contact.bodyB.node == self.paddle)
+    {
+        score++;
     }
 }
 
