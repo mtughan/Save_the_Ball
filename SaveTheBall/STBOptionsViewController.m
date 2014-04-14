@@ -8,12 +8,16 @@
 
 #import "STBOptionsViewController.h"
 #import "STBGameScene.h"
+#import "STBGameViewController.h"
 
 @interface STBOptionsViewController ()
     
 @end
 
 @implementation STBOptionsViewController
+{
+    SKShapeNode *tempBall;
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -90,15 +94,27 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //SKShapeNode *ball;
-    STBGameScene *stbGame;
-    stbGame = [[STBGameScene alloc]init];
-    stbGame.ball.fillColor = [SKColor whiteColor];
+
+    //STBGameScene *stbGame = [[STBGameScene alloc]init];
+    SKShapeNode *test = [[SKShapeNode alloc] init];
+
+    tempBall = test;
+    tempBall.fillColor = [SKColor redColor];
+    
+    //stbGame.ball.fillColor = [SKColor whiteColor];
     NSLog(@"CLICKED");
     
     //stbGame.ball = [[SKShapeNode alloc] init];
     //stbGame.ball.fillColor = [SKColor whiteColor];
     
     
+}
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if([segue.identifier isEqualToString:@"STBGameScene"]){
+        STBGameScene *dest = segue.destinationViewController;
+        dest.changedcolorball.fillColor = tempBall.fillColor;
+    }
 }
 
 

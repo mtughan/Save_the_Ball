@@ -46,7 +46,7 @@ static NSString *bottomWallName = @"bottom wall";
         // Ball
         self.ball = [[SKShapeNode alloc] init];
         self.ball.name = ballName;
-
+        self.ball.fillColor = self.changedcolorball.fillColor;
         //self.ball.fillColor = [SKColor whiteColor];
         //self.ball.fillColor = [SKColor redColor];
         

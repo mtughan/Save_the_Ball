@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "STBGameScene.h"
 
-@interface STBOptionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface STBOptionsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, SKPhysicsContactDelegate>
 
 @property (strong, nonatomic) NSArray *array;
 
