@@ -10,7 +10,7 @@
 
 @implementation STBData
 @synthesize name, score;
--(id)initWithData:(NSString *)name_data andScore: (NSString *)score_data
+-(id)initWithData:(NSString *)name_data andScore: (int)score_data
 {
     if(self=[self init])
     {

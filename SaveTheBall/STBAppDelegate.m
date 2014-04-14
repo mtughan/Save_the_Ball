@@ -11,7 +11,7 @@
 #import "STBData.h"
 
 @implementation STBAppDelegate
-@synthesize databaseName, databasePath, player, ballColour;
+@synthesize databaseName, databasePath, player, highScore, ballColour;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -86,10 +86,11 @@
 {
     [self.player removeAllObjects];
     sqlite3 *database;
+    highScore = -1;
     
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
     {
-        const char *sqlStatement = "SELECT * FROM players";
+        const char *sqlStatement = "SELECT * FROM players ORDER BY score DESC";
         sqlite3_stmt *compiledStatement;
         
         if(sqlite3_prepare(database, sqlStatement, -1, &compiledStatement, NULL)==SQLITE_OK)
@@ -97,9 +98,13 @@
             while(sqlite3_step(compiledStatement)==SQLITE_ROW)
             {
                 NSString *name = [NSString stringWithUTF8String:(char*)sqlite3_column_text(compiledStatement, 1)];
-                NSString *score = [NSString stringWithUTF8String:(char*)sqlite3_column_text(compiledStatement, 2)];
+                int score = sqlite3_column_int(compiledStatement, 2);
                 STBData *data = [[STBData alloc] initWithData:name andScore:score];
                 [self.player addObject:data];
+                
+                if(score > highScore) {
+                    highScore = score;
+                }
             }
         }
         sqlite3_finalize(compiledStatement);
@@ -108,7 +113,7 @@
 }
 
 // Insert Users into Database
--(void)insertIntoDatabase:(NSString *)name andScore:(NSString *)score;
+-(void)insertIntoDatabase:(NSString *)name andScore:(int)score;
 {
     sqlite3 *database;
     if(sqlite3_open([databasePath UTF8String], &database) == SQLITE_OK)
@@ -119,7 +124,7 @@
         if (retval == SQLITE_OK)
         {
             sqlite3_bind_text(compiledStatement, 1, [name UTF8String], -1, SQLITE_TRANSIENT);
-            sqlite3_bind_text(compiledStatement, 2, [score UTF8String], -1, SQLITE_TRANSIENT);
+            sqlite3_bind_int(compiledStatement, 2, score);
             
             // For debugging
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"SQL Insert" message:@"Score added" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
@@ -136,6 +141,9 @@
         sqlite3_finalize(compiledStatement);
     }
     sqlite3_close(database);
+    if(score > highScore) {
+        highScore = score;
+    }
 }
 
 - (void)setBallColour:(UIColor *)colour {

@@ -22,11 +22,12 @@
 @property (strong, nonatomic) NSString *databaseName;
 @property (strong, nonatomic) NSString *databasePath;
 @property (strong, nonatomic) NSMutableArray *player;
+@property (readonly, nonatomic) int highScore;
 
 @property (setter = setBallColour:, nonatomic) UIColor *ballColour;
 
 -(void)checkAndCreateDatabase;
 -(void)readFromDatabase;
--(void)insertIntoDatabase:(NSString *)name andScore:(NSString *)score;
+-(void)insertIntoDatabase:(NSString *)name andScore:(int)score;
 
 @end
