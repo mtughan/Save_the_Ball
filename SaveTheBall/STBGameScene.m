@@ -102,7 +102,7 @@ static NSString *bottomWallName = @"bottom wall";
         [self addChild:self.bottomWall];
         
         // Bottom wall physics (for collision detection)
-        SKPhysicsBody *bottomWallPhysics = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(self.frame.size.width, 0)];
+        SKPhysicsBody *bottomWallPhysics = [SKPhysicsBody bodyWithEdgeFromPoint:CGPointMake(0, 0) toPoint:CGPointMake(CGRectGetWidth(self.frame), 0)];
         bottomWallPhysics.categoryBitMask = bottomWallCategory;
         bottomWallPhysics.collisionBitMask = ballCategory;
         bottomWallPhysics.contactTestBitMask = ballCategory;
